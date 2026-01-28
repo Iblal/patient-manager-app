@@ -11,13 +11,33 @@ function App() {
   return (
     <>
       <div>
-        <h1>Patient manager</h1>
-        {patients.map((patient) => (
-          <li key={patient.id}>
-            First Name: {patient.firstName}
-            Last Name: {patient.lastName}, Age: {patient.age}
-          </li>
-        ))}
+        <h1>Patients</h1>
+        <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+          {patients.map((patient) => (
+            <div
+              key={patient.id}
+              style={{
+                border: "1px solid #ccc",
+                borderRadius: "8px",
+                padding: "16px",
+                maxWidth: "300px",
+              }}
+            >
+              <div>
+                <strong>ID:</strong> {patient.id}
+              </div>
+              <div>
+                <strong>First Name:</strong> {patient.firstName}
+              </div>
+              <div>
+                <strong>Last Name:</strong> {patient.lastName}
+              </div>
+              <div>
+                <strong>Age:</strong> {patient.age}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
