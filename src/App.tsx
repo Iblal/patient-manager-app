@@ -12,6 +12,12 @@ function App() {
     <>
       <div>
         <h1>Patient manager</h1>
+        {patients.map((patient) => (
+          <li key={patient.id}>
+            First Name: {patient.firstName}
+            Last Name: {patient.lastName}, Age: {patient.age}
+          </li>
+        ))}
       </div>
     </>
   );
