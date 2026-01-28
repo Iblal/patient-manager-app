@@ -1,6 +1,8 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import type { Patient } from "./types/patient";
-import PatientList from "./components/PatientList";
+import PatientsPage from "./pages/PatientsPage";
+import PatientDetailsPage from "./pages/PatientDetailsPage";
 
 const patients: Patient[] = [
   { id: "1", firstName: "John", lastName: "Doe", age: 35 },
@@ -10,12 +12,12 @@ const patients: Patient[] = [
 
 function App() {
   return (
-    <>
-      <div className="m-2">
-        <h1 className="text-3xl mb-3">Patients</h1>
-        <PatientList patients={patients} />
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PatientsPage patients={patients} />} />
+        <Route path="/patient/:id" element={<PatientDetailsPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
