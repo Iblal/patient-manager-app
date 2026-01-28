@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Patient } from "../types/patient";
 
 interface PatientCardProps {
@@ -20,9 +21,12 @@ function PatientCard({ patient }: PatientCardProps) {
         <strong>Age:</strong> {patient.age}
       </div>
       <div>
-        <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md ml-auto block">
+        <Link
+          to={`/patient/${patient.id}`}
+          className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md ml-auto block text-center"
+        >
           Patient Details
-        </button>
+        </Link>
       </div>
     </div>
   );
