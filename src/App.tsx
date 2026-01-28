@@ -10,8 +10,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<PatientsPage patients={patients} />} />
+        <Route path="/patients/new" element={<AddNewPatientPage />} />
         <Route
-          path="/patient/:id"
+          path="/patients/:id"
           element={
             <PatientDetailsPage
               patients={patients}
@@ -19,8 +20,6 @@ function App() {
             />
           }
         />
-        <Route path="/patient"></Route>
-        <Route path="/patient/new" element={<AddNewPatientPage />} />
       </Routes>
     </BrowserRouter>
   );
