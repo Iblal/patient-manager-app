@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import type { SubmitEvent } from "react";
 import { addPatient } from "../data/db";
 
 function AddNewPatientPage() {
@@ -9,10 +8,10 @@ function AddNewPatientPage() {
   const [lastName, setLastName] = useState("");
   const [dob, setDob] = useState("");
 
-  const handleSubmit = (e: SubmitEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     addPatient({ firstName, lastName, dob });
-    navigate("/patients");
+    navigate("/");
   };
 
   return (
