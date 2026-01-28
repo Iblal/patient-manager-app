@@ -5,3 +5,5 @@ function AddNewPatientPage() {
     </>
   );
 }
+
+export default AddNewPatientPage;
