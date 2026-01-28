@@ -10,7 +10,7 @@ const patients: Patient[] = [
 function App() {
   return (
     <>
-      <div>
+      <div className="m-2">
         <h1>Patients</h1>
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           {patients.map((patient) => (
