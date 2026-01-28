@@ -8,7 +8,12 @@ interface PatientsPageProps {
 function PatientsPage({ patients }: PatientsPageProps) {
   return (
     <div className="m-2">
-      <h1 className="text-3xl mb-3">Patients</h1>
+      <div className="flex mb-3">
+        <h1 className="text-3xl mr-3">Patients</h1>
+        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+          Add new patient
+        </button>
+      </div>
       <PatientList patients={patients} />
     </div>
   );
