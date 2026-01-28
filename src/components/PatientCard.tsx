@@ -18,7 +18,7 @@ function PatientCard({ patient }: PatientCardProps) {
         <strong>Last Name:</strong> {patient.lastName}
       </div>
       <div>
-        <strong>Age:</strong> {patient.age}
+        <strong>DOB:</strong> {patient.dob}
       </div>
       <div>
         <Link
