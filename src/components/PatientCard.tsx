@@ -22,7 +22,7 @@ function PatientCard({ patient }: PatientCardProps) {
       </div>
       <div>
         <Link
-          to={`/patient/${patient.id}`}
+          to={`/patients/${patient.id}`}
           className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md ml-auto block text-center"
         >
           Patient Details
