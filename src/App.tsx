@@ -3,6 +3,7 @@ import "./App.css";
 import { patients, appointments } from "./data/db";
 import PatientsPage from "./pages/PatientsPage";
 import PatientDetailsPage from "./pages/PatientDetailsPage";
+import AddNewPatientPage from "./pages/AddNewPatientPage";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
             />
           }
         />
+        <Route path="/patient"></Route>
+        <Route path="/patient/new" element={<AddNewPatientPage />} />
       </Routes>
     </BrowserRouter>
   );
