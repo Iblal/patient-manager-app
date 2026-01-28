@@ -1,5 +1,6 @@
 import "./App.css";
 import type { Patient } from "./types/patient";
+import PatientList from "./components/PatientList";
 
 const patients: Patient[] = [
   { id: "1", firstName: "John", lastName: "Doe", age: 35 },
@@ -12,32 +13,7 @@ function App() {
     <>
       <div className="m-2">
         <h1 className="text-3xl mb-3">Patients</h1>
-        <div className="flex flex-col gap-4">
-          {patients.map((patient) => (
-            <div
-              key={patient.id}
-              className="border border-gray-300 rounded-lg p-4 max-w-xs"
-            >
-              <div>
-                <strong>ID:</strong> {patient.id}
-              </div>
-              <div>
-                <strong>First Name:</strong> {patient.firstName}
-              </div>
-              <div>
-                <strong>Last Name:</strong> {patient.lastName}
-              </div>
-              <div>
-                <strong>Age:</strong> {patient.age}
-              </div>
-              <div>
-                <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md ml-auto block">
-                  Patient Details
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+        <PatientList patients={patients} />
       </div>
     </>
   );
