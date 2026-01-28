@@ -7,6 +7,11 @@ export const patients: Patient[] = [
   { id: "3", firstName: "Bob", lastName: "Johnson", dob: "1984-11-08" },
 ];
 
+export function addPatient(patient: Omit<Patient, "id">) {
+  const newId = (patients.length + 1).toString();
+  patients.push({ ...patient, id: newId });
+}
+
 export const appointments: Appointment[] = [
   {
     id: "1",
