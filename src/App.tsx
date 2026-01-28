@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <div className="m-2">
-        <h1>Patients</h1>
+        <h1 className="text-3xl">Patients</h1>
         <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
           {patients.map((patient) => (
             <div
