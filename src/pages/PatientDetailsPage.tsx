@@ -7,7 +7,10 @@ interface PatientDetailsPageProps {
   appointments: Appointment[];
 }
 
-function PatientDetailsPage({ patients, appointments }: PatientDetailsPageProps) {
+function PatientDetailsPage({
+  patients,
+  appointments,
+}: PatientDetailsPageProps) {
   const { id } = useParams<{ id: string }>();
   const patient = patients.find((p) => p.id === id);
   const patientAppointments = appointments.filter((a) => a.patientId === id);
